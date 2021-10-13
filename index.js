@@ -10,7 +10,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
-    console.log(client.channels.cache.get('id'));
+    console.log(client.channels.cache.get('609883567899672592').members);
 });
 
 client.on('guildMemberAdd', member => {
