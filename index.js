@@ -51,8 +51,6 @@ client.on('voiceStateUpdate', function (oldMember, newMember) {
     const username = newMember.member.user.username
     
     // console.log("newMember", newMember.member.voice.channel);
-    
-// Fire a callback once the text has completed being spoken
 
     say.export(`Bonjour ${username}`, 'Microsoft Zira Desktop', 1, 'hal.wav', async (err) => {
         if (err) {
