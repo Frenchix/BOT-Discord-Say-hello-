@@ -7,10 +7,9 @@ const { joinVoiceChannel,
 	createAudioPlayer,
 	createAudioResource,
 	entersState,
-	StreamType,
 	AudioPlayerStatus,
 	VoiceConnectionStatus } = require('@discordjs/voice');
-const say = require('say')
+const say = require('say');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_VOICE_STATES] });
@@ -18,9 +17,7 @@ const player = createAudioPlayer();
 
 function playSong() {
 	const resource = createAudioResource('hal.wav');
-
 	player.play(resource);
-
 	return entersState(player, AudioPlayerStatus.Playing, 5e3);
 }
 
